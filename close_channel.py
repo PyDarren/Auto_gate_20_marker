@@ -32,7 +32,7 @@ if __name__ == '__main__':
 
     Fpath = Fpath+"/rename_by_panelTable/"
     os.makedirs(Fpath+"/WriteFcs/")
-    os.makedirs(Fpath+"/Output/")
+    # os.makedirs(Fpath+"/Output/")
 
     for filename in [filename for filename in os.listdir(Fpath) if os.path.splitext(filename)[1] == ".fcs"]:
         file = Fpath + '/' + filename
