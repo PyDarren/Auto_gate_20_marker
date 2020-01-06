@@ -44,8 +44,7 @@ if __name__ == '__main__':
         # stain_channel_index.extend(add_index)
         pars = [pars[i] for i in range(0, len(pars)) if i + 1 in save_channel]
 
-        pars = fcs.delete_channel(pars, 89, 139, 142, 143, 146, 150, 151, 152, 154, 156, 157, 161, 162, 163, 164, 165,
-                                  166, 167, 168, 169, 172, 173)
+        pars = fcs.delete_channel(pars, 139, 162, 168, 169, 173)
 
         # pars = fcs.marker_rename(pars, ("Event_length", "Event_length"))
 
