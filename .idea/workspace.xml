@@ -2,9 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="84a6c1c6-77d9-48ba-aa4b-421e21d473a7" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Nets/model_CD4.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Nets/model_CD8.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/IMMsight_choose_panel.py" beforeDir="false" afterPath="$PROJECT_DIR$/IMMsight_choose_panel.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -32,10 +31,10 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/IMMsight_choose_panel.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="624">
+            <state relative-caret-position="-1638">
               <caret line="29" column="43" selection-start-line="29" selection-start-column="43" selection-end-line="29" selection-end-column="43" />
             </state>
           </provider>
@@ -65,7 +64,16 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Nets/model_CD4.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3380">
+            <state relative-caret-position="468">
+              <caret line="123" column="24" selection-end-line="133" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Nets/model_CD8.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="637">
               <caret line="133" selection-start-line="133" selection-end-line="133" />
             </state>
           </provider>
@@ -94,6 +102,7 @@
         <option value="$PROJECT_DIR$/Nets/model_CD3.py" />
         <option value="$PROJECT_DIR$/Nets/model_CD4.py" />
         <option value="$PROJECT_DIR$/IMMsight_choose_panel.py" />
+        <option value="$PROJECT_DIR$/Nets/model_CD8.py" />
       </list>
     </option>
   </component>
@@ -234,12 +243,12 @@
       <workItem from="1577683698438" duration="14895000" />
       <workItem from="1577760540383" duration="9000" />
       <workItem from="1578290335114" duration="10558000" />
-      <workItem from="1578303745189" duration="1048000" />
+      <workItem from="1578303745189" duration="3102000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="26510000" />
+    <option name="totallyTimeSpent" value="28564000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -249,6 +258,7 @@
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info id="Run" order="3" weight="0.48720682" />
+      <window_info id="Python Console" order="4" visible="true" weight="0.52238804" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Debug" order="2" weight="0.4" />
@@ -258,9 +268,8 @@
       <window_info anchor="bottom" id="Docker" order="6" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info anchor="bottom" id="Database Changes" order="8" />
-      <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
+      <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" weight="0.32924107" />
       <window_info anchor="bottom" id="Terminal" order="10" />
-      <window_info active="true" anchor="bottom" id="Python Console" order="11" visible="true" weight="0.19308035" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -317,17 +326,24 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Nets/model_CD4.py">
+    <entry file="file://$PROJECT_DIR$/IMMsight_choose_panel.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3380">
-          <caret line="133" selection-start-line="133" selection-end-line="133" />
+        <state relative-caret-position="-1638">
+          <caret line="29" column="43" selection-start-line="29" selection-start-column="43" selection-end-line="29" selection-end-column="43" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/IMMsight_choose_panel.py">
+    <entry file="file://$PROJECT_DIR$/Nets/model_CD4.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="624">
-          <caret line="29" column="43" selection-start-line="29" selection-start-column="43" selection-end-line="29" selection-end-column="43" />
+        <state relative-caret-position="468">
+          <caret line="123" column="24" selection-end-line="133" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Nets/model_CD8.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="637">
+          <caret line="133" selection-start-line="133" selection-end-line="133" />
         </state>
       </provider>
     </entry>
