@@ -41,9 +41,6 @@ if __name__ == '__main__':
     # Choose File Path
     Fpath = filedialog.askdirectory()
 
-    csv_path = Fpath + '/WriteFcs/'
-    output_path = Fpath + '/Output/'
-
     # Read Panel Information
     panel_file = Fpath + "/panel.xlsx"
     panel_tuple = Fcs.export_panel_tuple(panel_file)
@@ -55,7 +52,10 @@ if __name__ == '__main__':
 
     Fpath = Fpath+"/rename_by_panelTable/"
     os.makedirs(Fpath+"/WriteFcs/")
-    # os.makedirs(Fpath+"/Output/")
+    os.makedirs(Fpath+"/Output/")
+
+    csv_path = Fpath + '/WriteFcs/'
+    output_path = Fpath + '/Output/'
 
     for filename in [filename for filename in os.listdir(Fpath) if os.path.splitext(filename)[1] == ".fcs"]:
         file = Fpath + '/' + filename
@@ -88,14 +88,36 @@ if __name__ == '__main__':
                'CD183(CXCR3)', 'CD94', 'CD127(IL-7Ra)', 'CD279(PD-1)', 'CD38',
                'CD20', 'CD16', 'HLA-DR', 'CD4', 'CD8a', 'CD11b')
 
-    input_shape = (None, 36)
 
-    model_CD3 = tf.keras.models.load_model('C:/Users/pc/OneDrive/git_repo/Auto_gate_20_marker/Models/CD3_classfy.h5')
-    model_CD3.build(input_shape)
 
     new_samples_path = Fpath + 'WriteFcs/'
 
+    CD3_Pos_list = list()
+    CD4_Pos_list = list()
+
     for info in os.listdir(new_samples_path):
+        input_shape = (None, 36)
+
+        model_CD3 = tf.keras.models.load_model('C:/Users/pc/OneDrive/git_repo/Auto_gate_20_marker/Models/CD3_classfy.h5')
+        model_CD3.build(input_shape)
+
+        model_CD4 = tf.keras.models.load_model('C:/Users/pc/OneDrive/git_repo/Auto_gate_20_marker/Models/CD4_classfy.h5')
+        model_CD4.build(input_shape)
+
         sample_df = pd.read_csv(new_samples_path + info)
         sample_df = sample_df.loc[:, markers]
-        ratio_CD3_all, CD3_df, CD3_labels = ratioCalculation2(sample_df, model_CD3)
+        # CD3
+        new_df = copy.deepcopy(sample_df)
+        ratio_CD3_all, CD3_df, CD3_labels = ratioCalculation2(new_df, model_CD3)
+        CD3_Pos_list.append(ratio_CD3_all[0])
+        # CD4
+        new_df = copy.deepcopy(sample_df)
+        ratio_CD4_all, CD4_df, CD4_labels = ratioCalculation2(new_df, model_CD4)
+        CD4_Pos_list.append(ratio_CD4_all[0])
+
+
+    pre_df = pd.DataFrame(CD3_Pos_list, columns=['CD3_Auto'])
+    pre_df['CD4_Auto'] = CD4_Pos_list
+    pre_df['id'] = [i[:11] for i in os.listdir(new_samples_path)]
+    pre_df = pre_df.reindex(columns=['id', 'CD3_Auto', 'CD4_Auto'])
+    pre_df.to_excel(output_path+'pre_df.xlsx', index=False)
