@@ -131,4 +131,3 @@ if __name__ == "__main__":
 
     ## save model
     model.save('C:/Users/pc/OneDrive/git_repo/Auto_gate_20_marker/Models/CD56_classfy.h5')
-
