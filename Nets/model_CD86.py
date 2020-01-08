@@ -66,8 +66,8 @@ if __name__ == "__main__":
     ######################################
     #### Data import
     data_path = 'E:/cd/0_Auto_Gate_20_marker/model_data/'
-    file_0 = 'CD45RA+'
-    file_1 = 'CD45RA-'
+    file_0 = 'CD86+'
+    file_1 = 'CD86-'
     markers = ('CD57', 'CD3', 'CD56', 'gdTCR', 'CCR6', 'CD14 ',
                'IgD', 'CD123(IL-3R)', 'CD85J', 'CD19', 'CD25', 'CD274(PD-L1)',
                'CD278(ICOS)', 'CD39', 'CD27', 'CD24', 'CD45RA', 'CD86', 'CD28',
@@ -130,4 +130,6 @@ if __name__ == "__main__":
     print('\nTest less accuracy:', test_less_acc)
 
     ## save model
-    model.save('C:/Users/pc/OneDrive/git_repo/Auto_gate_20_marker/Models/CD45RA_classfy.h5')
+    model.save('C:/Users/pc/OneDrive/git_repo/Auto_gate_20_marker/Models/CD86_classfy.h5')
+
+
