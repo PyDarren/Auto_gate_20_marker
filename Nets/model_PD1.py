@@ -119,7 +119,7 @@ if __name__ == "__main__":
 
     model.fit(train_X,
               train_labels,
-              epochs=300,
+              epochs=30,
               # batch_size=16384,
               # validation_data=(test_X, test_labels),
               # verbose=2
