@@ -94,6 +94,10 @@ if __name__ == '__main__':
 
     CD3_Pos_list = list()
     CD4_Pos_list = list()
+    CD57_Pos_list = list()
+    CD56_Pos_list = list()
+    gdTCR_Pos_list = list()
+    CD8_Pos_list = list()
 
     for info in os.listdir(new_samples_path):
         input_shape = (None, 36)
@@ -103,6 +107,18 @@ if __name__ == '__main__':
 
         model_CD4 = tf.keras.models.load_model('C:/Users/pc/OneDrive/git_repo/Auto_gate_20_marker/Models/CD4_classfy.h5')
         model_CD4.build(input_shape)
+
+        model_CD57 = tf.keras.models.load_model('C:/Users/pc/OneDrive/git_repo/Auto_gate_20_marker/Models/CD57_classfy.h5')
+        model_CD57.build(input_shape)
+        
+        model_CD56 = tf.keras.models.load_model('C:/Users/pc/OneDrive/git_repo/Auto_gate_20_marker/Models/CD56_classfy.h5')
+        model_CD56.build(input_shape)
+
+        model_gdTCR = tf.keras.models.load_model('C:/Users/pc/OneDrive/git_repo/Auto_gate_20_marker/Models/gdTCR_classfy.h5')
+        model_gdTCR.build(input_shape)
+
+        model_CD8 = tf.keras.models.load_model('C:/Users/pc/OneDrive/git_repo/Auto_gate_20_marker/Models/CD8_classfy.h5')
+        model_CD8.build(input_shape)
 
         sample_df = pd.read_csv(new_samples_path + info)
         sample_df = sample_df.loc[:, markers]
@@ -114,10 +130,32 @@ if __name__ == '__main__':
         new_df = copy.deepcopy(sample_df)
         ratio_CD4_all, CD4_df, CD4_labels = ratioCalculation2(new_df, model_CD4)
         CD4_Pos_list.append(ratio_CD4_all[0])
+        # CD57
+        new_df = copy.deepcopy(sample_df)
+        ratio_CD57_all, CD57_df, CD57_labels = ratioCalculation2(new_df, model_CD57)
+        CD57_Pos_list.append(ratio_CD57_all[0])
+        # CD56
+        new_df = copy.deepcopy(sample_df)
+        ratio_CD56_all, CD56_df, CD56_labels = ratioCalculation2(new_df, model_CD56)
+        CD56_Pos_list.append(ratio_CD56_all[0])
+        # gdTCR
+        new_df = copy.deepcopy(sample_df)
+        ratio_gdTCR_all, gdTCR_df, gdTCR_labels = ratioCalculation2(new_df, model_gdTCR)
+        gdTCR_Pos_list.append(ratio_gdTCR_all[0])
+        # CD8
+        new_df = copy.deepcopy(sample_df)
+        ratio_CD8_all, CD8_df, CD8_labels = ratioCalculation2(new_df, model_CD8)
+        CD8_Pos_list.append(ratio_CD8_all[0])
+
+
 
 
     pre_df = pd.DataFrame(CD3_Pos_list, columns=['CD3_Auto'])
     pre_df['CD4_Auto'] = CD4_Pos_list
+    pre_df['CD57_Auto'] = CD57_Pos_list
+    pre_df['CD56_Auto'] = CD56_Pos_list
+    pre_df['gdTCR_Auto'] = gdTCR_Pos_list
+    pre_df['CD8_Auto'] = CD8_Pos_list
     pre_df['id'] = [i[:11] for i in os.listdir(new_samples_path)]
-    pre_df = pre_df.reindex(columns=['id', 'CD3_Auto', 'CD4_Auto'])
+    pre_df = pre_df.reindex(columns=['id', 'CD3_Auto', 'CD4_Auto', 'CD57_Auto', 'CD56_Auto', 'gdTCR_Auto', 'CD8_Auto'])
     pre_df.to_excel(output_path+'pre_df.xlsx', index=False)
