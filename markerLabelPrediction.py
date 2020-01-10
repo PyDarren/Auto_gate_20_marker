@@ -286,6 +286,32 @@ def markerRatioCalculation(sample_df):
     ratio_CD16_all, CD16_df, CD16_labels = ratioCalculation2(new_df, model_CD16)
     label_df = label_df.append(pd.DataFrame(CD16_labels).T)
     print('Marker %s has finished!' % 'CD16')
+    # HLA_DR
+    new_df = copy.deepcopy(sample_df)
+    ratio_HLA_DR_all, HLA_DR_df, HLA_DR_labels = ratioCalculation2(new_df, model_HLA_DR)
+    label_df = label_df.append(pd.DataFrame(HLA_DR_labels).T)
+    print('Marker %s has finished!' % 'HLA_DR')
+    # CD11b
+    new_df = copy.deepcopy(sample_df)
+    ratio_CD11b_all, CD11b_df, CD11b_labels = ratioCalculation2(new_df, model_CD11b)
+    label_df = label_df.append(pd.DataFrame(CD11b_labels).T)
+    print('Marker %s has finished!' % 'CD11b')
+    # CCR6
+    new_df = copy.deepcopy(sample_df)
+    ratio_CCR6_all, CCR6_df, CCR6_labels = ratioCalculation2(new_df, model_CCR6)
+    label_df = label_df.append(pd.DataFrame(CCR6_labels).T)
+    print('Marker %s has finished!' % 'CCR6')
+    # CD38
+    new_df = copy.deepcopy(sample_df)
+    ratio_CD38_all, CD38_df, CD38_labels = ratioCalculation2(new_df, model_CD38)
+    label_df = label_df.append(pd.DataFrame(CD38_labels).T)
+    print('Marker %s has finished!' % 'CD38')
+    # CD274
+    new_df = copy.deepcopy(sample_df)
+    ratio_CD274_all, CD274_df, CD274_labels = ratioCalculation2(new_df, model_CD274)
+    label_df = label_df.append(pd.DataFrame(CD274_labels).T)
+    print('Marker %s has finished!' % 'CD274')
+
 
     print('Label prediction has finished!', '\n', '\n')
     # print('Now start to write out the data. This process is time consuming. Please be patient.^_^')
@@ -296,7 +322,8 @@ def markerRatioCalculation(sample_df):
                         'CD14', 'Igd', 'CD123', 'CD85j', 'CD19', 'CD25',
                         'CD39', 'CD27', 'CD24', 'CD54RA', 'CD86', 'CD28',
                         'CD197', 'CD11c', 'CD33', 'CDC152', 'CD161', 'CXCR5',
-                        'CD183', 'CD94', 'CD127', 'PD1', 'CD20', 'CD16']
+                        'CD183', 'CD94', 'CD127', 'PD1', 'CD20', 'CD16',
+                        'HLA_DR', 'CD11b', 'CCR6', 'CD38', 'CD274']
     print('Time cost is %s.' % (time.time() - start))
     print('-' * 100)
     return label_df
