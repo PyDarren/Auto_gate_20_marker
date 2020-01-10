@@ -3,6 +3,7 @@
 # Created by: Chen Da
 # Created on: 2020/1/10
 
+
 import pandas as pd
 import numpy as np
 import tensorflow as tf
@@ -66,8 +67,8 @@ if __name__ == "__main__":
     ######################################
     #### Data import
     data_path = 'E:/cd/0_Auto_Gate_20_marker/model_data/'
-    file_0 = 'CCR6+'
-    file_1 = 'CCR6-'
+    file_0 = 'CD274+'
+    file_1 = 'CD274-'
     markers = ('CD57', 'CD3', 'CD56', 'gdTCR', 'CCR6', 'CD14 ',
                'IgD', 'CD123(IL-3R)', 'CD85J', 'CD19', 'CD25', 'CD274(PD-L1)',
                'CD278(ICOS)', 'CD39', 'CD27', 'CD24', 'CD45RA', 'CD86', 'CD28',
@@ -110,7 +111,7 @@ if __name__ == "__main__":
     ])
 
 
-    optimizer = tf.keras.optimizers.Adam(0.001)
+    optimizer = tf.keras.optimizers.Adam(0.0005)
 
     model.compile(optimizer=optimizer,
                   loss='sparse_categorical_crossentropy',
@@ -118,7 +119,7 @@ if __name__ == "__main__":
 
     model.fit(train_X,
               train_labels,
-              epochs=10,
+              epochs=100,
               # batch_size=16384,
               # validation_data=(test_X, test_labels),
               # verbose=2
@@ -130,6 +131,5 @@ if __name__ == "__main__":
     print('\nTest less accuracy:', test_less_acc)
 
     ## save model
-    model.save('C:/Users/pc/OneDrive/git_repo/Auto_gate_20_marker/Models/CCR6_classfy.h5')
-
+    model.save('C:/Users/pc/OneDrive/git_repo/Auto_gate_20_marker/Models/CD274_classfy.h5')
 
