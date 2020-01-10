@@ -121,6 +121,16 @@ def markerRatioCalculation(sample_df):
     model_CD20.build(input_shape)
     model_CD16 = tf.keras.models.load_model('C:/Users/pc/OneDrive/git_repo/Auto_gate_20_marker/Models/CD16_classfy.h5')
     model_CD16.build(input_shape)
+    model_HLA_DR = tf.keras.models.load_model('C:/Users/pc/OneDrive/git_repo/Auto_gate_20_marker/Models/HLA-DR_classfy.h5')
+    model_HLA_DR.build(input_shape)
+    model_CD11b = tf.keras.models.load_model('C:/Users/pc/OneDrive/git_repo/Auto_gate_20_marker/Models/CD11b_classfy.h5')
+    model_CD11b.build(input_shape)
+    model_CCR6 = tf.keras.models.load_model('C:/Users/pc/OneDrive/git_repo/Auto_gate_20_marker/Models/CCR6_classfy.h5')
+    model_CCR6.build(input_shape)
+    model_CD38 = tf.keras.models.load_model('C:/Users/pc/OneDrive/git_repo/Auto_gate_20_marker/Models/CD38_classfy.h5')
+    model_CD38.build(input_shape)
+    model_CD274 = tf.keras.models.load_model('C:/Users/pc/OneDrive/git_repo/Auto_gate_20_marker/Models/CD274_classfy.h5')
+    model_CD274.build(input_shape)
 
     label_df = pd.DataFrame()
 
