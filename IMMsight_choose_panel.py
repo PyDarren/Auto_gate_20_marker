@@ -216,7 +216,6 @@ if __name__ == '__main__':
         model_CD16.build(input_shape)
 
 
-
         sample_df = pd.read_csv(new_samples_path + info)
         sample_df = sample_df.loc[:, markers]
         # CD3
