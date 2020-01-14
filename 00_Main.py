@@ -12,6 +12,48 @@ import tensorflow as tf
 import os, re, warnings, copy, time
 from markerLabelPrediction import markerRatioCalculation
 from immuneAgeSubsets import subsetsRatioCalculation_real
+from confidenceCalculation import confidence_calculation
+
+
+warnings.filterwarnings('ignore')
+
+
+def normalization(df, feature):
+    '''
+    1、Calculated the mean and s.d. of frequency values between the 10th and 90th percentiles;
+    2、Normalize cellular frequencies by subtraction of the mean and division by s.d.
+    :param feature:  The feature to normalized.
+    :return:
+    '''
+    f_list = list(df[feature])
+    f_list = [i for i in f_list if i != 0]              # NA values are not computed
+    quantile_10 = np.quantile(f_list, 0.1)
+    quantile_90 = np.quantile(f_list, 0.9)
+    nums_to_calcu = [i for i in f_list if i >= quantile_10 and i <= quantile_90]
+    f_mean = np.mean(nums_to_calcu)
+    f_std = np.std(nums_to_calcu)
+    df[feature] = df[feature].apply(lambda x : (x - f_mean) / f_std)
+
+
+def scaling(df):
+    for subset in df.columns[:-4]:
+        normalization(df, subset)
+        print('Cell subset "%s" has finished.' % subset)
+
+
+def confidence_adjuest(df):
+    '''
+    Corrected the calculation formula of some subsets.
+    :param df:
+    :return:
+    '''
+    df.iloc[2,1] = df.iloc[2,1] * df.iloc[1,1] / 100
+    df.iloc[39,1] = df.iloc[39,1] * df.iloc[1,1] / 100
+    df.iloc[66,1] = df.iloc[66,1] * df.iloc[65,1] / 100
+    df.iloc[76,1] = df.iloc[76,1] * df.iloc[65,1] / 100
+    return df
+
+
 
 
 def ratioCalculation2(df, model):
@@ -136,6 +178,31 @@ if __name__ == '__main__':
         real_all = real_all.append(real_merge_df)
         print('Subset ratio calculation has finished!', '\n', '-'*100, '\n')
 
+        # 3. Calculate the relative value of a confidence interval
+        real_df_copy = copy.deepcopy(real_df)
+        real_df_adjust = confidence_adjuest(real_df_copy)
+        confidence_df = confidence_calculation(real_df_adjust)
+        confidence_df.to_excel(sample_path+'/confidence.xlsx', index=False)
+        confidence_merge_df = confidence_df.T
+        confidence_merge_df.columns = list(confidence_df['subset'].values)
+        confidence_merge_df = confidence_merge_df.iloc[1:, :]
+        confidence_merge_df.index = [sample_id]
+        confidence_all = confidence_all.append(confidence_merge_df)
+        print('Confidence calculation has finished!', '\n', '-'*100, '\n')
+        adjust_df = pd.DataFrame(real_df_adjust['frequency'].values).T
+        adjust_df.columns = list(real_df_adjust['subset'].values)
+        adjust_df.index = [sample_id]
+        real_adjust_all = real_adjust_all.append(adjust_df)
+
     print('Total time is %s.' % (time.time()-start))
 
     label_frequency_all.to_excel(output_path+'label_frequency_all.xlsx')
+    real_all.to_excel(output_path+'real_all.xlsx')
+    confidence_all.to_excel(output_path+'confidence_all.xlsx')
+
+
+    # Extract the confidence interval 66 subgroup ratios
+    select_subsets_df = pd.read_excel('C:/Users/pc/OneDrive/PLTTECH/Project/00_immune_age_project/Rawdata/置信区间选择.xlsx')
+    select_subsets = list(select_subsets_df['subset'].values)
+    confidence_66_ratio = real_adjust_all.loc[:, select_subsets].T
+    confidence_66_ratio.to_excel(output_path+'confidence_66_ratio.xlsx')

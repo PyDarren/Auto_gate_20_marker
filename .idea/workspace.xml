@@ -2,10 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="84a6c1c6-77d9-48ba-aa4b-421e21d473a7" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/confidenceCalculation.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/00_Main.py" beforeDir="false" afterPath="$PROJECT_DIR$/00_Main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/immuneAgeSubsets.py" beforeDir="false" afterPath="$PROJECT_DIR$/immuneAgeSubsets.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/markerLabelPrediction.py" beforeDir="false" afterPath="$PROJECT_DIR$/markerLabelPrediction.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/进度.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/进度.xlsx" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -15,74 +17,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Nets/CD16.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2152">
-              <caret line="131" column="16" selection-end-line="134" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Nets/model_CCR6.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="263">
-              <caret line="118" column="21" selection-start-line="118" selection-start-column="21" selection-end-line="118" selection-end-column="21" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Nets/model_CD38.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="256">
-              <caret line="136" lean-forward="true" selection-end-line="136" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Nets/model_CD274.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="220">
-              <caret line="134" selection-start-line="134" selection-end-line="134" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Nets/model_HLA-DR.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="357">
-              <caret line="133" selection-start-line="133" selection-end-line="133" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Nets/model_CD11b.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="256">
-              <caret line="133" lean-forward="true" selection-start-line="133" selection-end-line="133" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/IMMsight_choose_panel.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-3920">
-              <caret line="41" column="36" selection-start-line="41" selection-start-column="36" selection-end-line="41" selection-end-column="36" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/00_Main.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1967">
-              <caret line="109" column="71" selection-start-line="109" selection-start-column="71" selection-end-line="109" selection-end-column="71" />
+            <state relative-caret-position="756">
+              <caret line="200" column="61" selection-start-line="200" selection-start-column="61" selection-end-line="200" selection-end-column="61" />
               <folding>
                 <element signature="e#86#103#0" expanded="true" />
               </folding>
@@ -91,22 +30,52 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/markerLabelPrediction.py">
+        <entry file="file://$PROJECT_DIR$/confidenceCalculation.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="225">
-              <caret line="325" column="64" selection-start-line="325" selection-start-column="64" selection-end-line="325" selection-end-column="64" />
+            <state relative-caret-position="660">
+              <caret line="37" column="18" lean-forward="true" selection-start-line="37" selection-start-column="18" selection-end-line="37" selection-end-column="18" />
               <folding>
-                <element signature="e#173#192#0" expanded="true" />
+                <element signature="e#86#105#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/close_channel.py">
+        <entry file="file://$PROJECT_DIR$/immuneAgeSubsets.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-8">
-              <caret line="46" selection-start-line="46" selection-end-line="47" />
+            <state relative-caret-position="396">
+              <caret line="918" column="20" selection-start-line="918" selection-start-column="20" selection-end-line="918" selection-end-column="20" />
+              <folding>
+                <element signature="e#172#191#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/markerLabelPrediction.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="690">
+              <caret line="335" lean-forward="true" selection-end-line="335" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Nets/model_CD127.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="3120">
+              <caret line="133" selection-start-line="133" selection-end-line="133" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Nets/model_CD274.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="3144">
+              <caret line="134" selection-start-line="134" selection-end-line="134" />
             </state>
           </provider>
         </entry>
@@ -126,6 +95,10 @@
       <find>CD28</find>
       <find>CD8</find>
       <find>CD16</find>
+      <find>CD152</find>
+      <find>CD274</find>
+      <find>CD45</find>
+      <find>IGD</find>
     </findStrings>
     <replaceStrings>
       <replace>CD8</replace>
@@ -133,6 +106,9 @@
       <replace>CD16</replace>
       <replace>HLA-DR</replace>
       <replace>CD274</replace>
+      <replace>CD278</replace>
+      <replace>CD45RA</replace>
+      <replace>Igd</replace>
     </replaceStrings>
   </component>
   <component name="Git.Settings">
@@ -173,19 +149,21 @@
         <option value="$PROJECT_DIR$/Nets/model_ CD161.py" />
         <option value="$PROJECT_DIR$/Nets/model_CXCR5.py" />
         <option value="$PROJECT_DIR$/Nets/model_CD183.py" />
-        <option value="$PROJECT_DIR$/Nets/model_CD94.py" />
-        <option value="$PROJECT_DIR$/Nets/model_CD127.py" />
         <option value="$PROJECT_DIR$/Nets/model_PD1.py" />
         <option value="$PROJECT_DIR$/Nets/model_CD20.py" />
         <option value="$PROJECT_DIR$/Nets/CD16.py" />
         <option value="$PROJECT_DIR$/IMMsight_choose_panel.py" />
-        <option value="$PROJECT_DIR$/00_Main.py" />
         <option value="$PROJECT_DIR$/Nets/model_HLA-DR.py" />
         <option value="$PROJECT_DIR$/Nets/model_CD11b.py" />
         <option value="$PROJECT_DIR$/Nets/model_CD38.py" />
-        <option value="$PROJECT_DIR$/markerLabelPrediction.py" />
-        <option value="$PROJECT_DIR$/Nets/model_CD274.py" />
         <option value="$PROJECT_DIR$/Nets/model_CCR6.py" />
+        <option value="$PROJECT_DIR$/Nets/model_CD94.py" />
+        <option value="$PROJECT_DIR$/Nets/model_CD127.py" />
+        <option value="$PROJECT_DIR$/Nets/model_CD274.py" />
+        <option value="$PROJECT_DIR$/markerLabelPrediction.py" />
+        <option value="$PROJECT_DIR$/immuneAgeSubsets.py" />
+        <option value="$PROJECT_DIR$/confidenceCalculation.py" />
+        <option value="$PROJECT_DIR$/00_Main.py" />
       </list>
     </option>
   </component>
@@ -219,7 +197,7 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="settings.editor.selected.configurable" value="Errors" />
+    <property name="settings.editor.selected.configurable" value="MTConfigurable" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -233,7 +211,29 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.IMMsight_choose_panel">
+  <component name="RunManager" selected="Python.00_Main">
+    <configuration name="00_Main" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="Auto_gate_20_marker" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/00_Main.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="IMMsight_choose_panel" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="Auto_gate_20_marker" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -278,7 +278,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="marker_merge" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="markerLabelPrediction" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="Auto_gate_20_marker" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -291,7 +291,7 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/marker_merge.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/markerLabelPrediction.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -324,10 +324,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.00_Main" />
+        <item itemvalue="Python.markerLabelPrediction" />
         <item itemvalue="Python.IMMsight_choose_panel" />
         <item itemvalue="Python.model_CD28" />
         <item itemvalue="Python.close_channel" />
-        <item itemvalue="Python.marker_merge" />
       </list>
     </recent_temporary>
   </component>
@@ -347,20 +348,23 @@
       <workItem from="1578303745189" duration="18950000" />
       <workItem from="1578387667618" duration="8154000" />
       <workItem from="1578461925921" duration="68000" />
-      <workItem from="1578462026494" duration="46761000" />
+      <workItem from="1578462026494" duration="47381000" />
+      <workItem from="1578879567792" duration="6665000" />
+      <workItem from="1578980443087" duration="6707000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="99395000" />
+    <option name="totallyTimeSpent" value="113387000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <frame x="66" y="-8" width="1862" height="1096" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.17593583" />
+      <window_info content_ui="combo" id="Project" order="0" weight="0.18784839" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info active="true" id="Python Console" order="3" visible="true" weight="0.4214047" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Debug" order="2" weight="0.4" />
@@ -372,8 +376,7 @@
       <window_info anchor="bottom" id="Database Changes" order="8" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" weight="0.32924107" />
       <window_info anchor="bottom" id="Terminal" order="10" />
-      <window_info anchor="bottom" id="Run" order="11" weight="0.73214287" />
-      <window_info anchor="bottom" id="Python Console" order="12" weight="0.4479638" />
+      <window_info anchor="bottom" id="Run" order="11" weight="0.23235613" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -389,8 +392,10 @@
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/Auto_gate_20_marker$IMMsight_choose_panel.coverage" NAME="IMMsight_choose_panel Coverage Results" MODIFIED="1578618381021" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Auto_gate_20_marker$close_channel.coverage" NAME="close_channel Coverage Results" MODIFIED="1578293072673" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Auto_gate_20_marker$00_Main.coverage" NAME="00_Main Coverage Results" MODIFIED="1578986135905" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Auto_gate_20_marker$marker_merge.coverage" NAME="marker_merge Coverage Results" MODIFIED="1578291300614" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Auto_gate_20_marker$model_CD28.coverage" NAME="model_CD28 Coverage Results" MODIFIED="1578466737484" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Nets" />
+    <SUITE FILE_PATH="coverage/Auto_gate_20_marker$markerLabelPrediction.coverage" NAME="markerLabelPrediction Coverage Results" MODIFIED="1578908357554" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python37/Lib/site-packages/pandas/core/frame.py">
@@ -495,13 +500,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="611">
           <caret line="78" selection-end-line="134" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Nets/model_CD278.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="651">
-          <caret line="131" column="4" selection-start-line="131" selection-start-column="4" selection-end-line="131" selection-end-column="4" />
         </state>
       </provider>
     </entry>
@@ -616,34 +614,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Nets/model_CD94.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-8">
-          <caret line="133" selection-end-line="133" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Nets/model_CD127.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-8">
-          <caret line="133" selection-start-line="133" selection-end-line="133" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/close_channel.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-8">
-          <caret line="46" selection-start-line="46" selection-end-line="47" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/IMMsight_choose_panel.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-3920">
-          <caret line="41" column="36" selection-start-line="41" selection-start-column="36" selection-end-line="41" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Nets/model_PD1.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="489">
@@ -658,38 +628,38 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Nets/model_HLA-DR.py">
+    <entry file="file://$PROJECT_DIR$/close_channel.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="133" selection-start-line="133" selection-end-line="133" />
+        <state relative-caret-position="1008">
+          <caret line="46" selection-start-line="46" selection-end-line="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/IMMsight_choose_panel.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="24">
+          <caret line="41" column="36" selection-start-line="41" selection-start-column="36" selection-end-line="41" selection-end-column="36" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Nets/model_CD11b.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="256">
-          <caret line="133" lean-forward="true" selection-start-line="133" selection-end-line="133" />
+        <state relative-caret-position="644">
+          <caret line="133" selection-start-line="133" selection-end-line="133" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Nets/CD16.py">
+    <entry file="file://$PROJECT_DIR$/Nets/model_HLA-DR.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2152">
-          <caret line="131" column="16" selection-end-line="134" />
+        <state relative-caret-position="548">
+          <caret line="133" selection-start-line="133" selection-end-line="133" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Nets/model_CD38.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="256">
-          <caret line="136" lean-forward="true" selection-end-line="136" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Nets/model_CD274.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="220">
-          <caret line="134" selection-start-line="134" selection-end-line="134" />
+        <state relative-caret-position="668">
+          <caret line="136" selection-end-line="136" />
         </state>
       </provider>
     </entry>
@@ -700,20 +670,72 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Nets/CD16.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="764">
+          <caret line="131" column="16" selection-end-line="134" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Nets/model_CD94.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="312">
+          <caret line="133" selection-start-line="133" selection-end-line="133" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Nets/model_CD127.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3120">
+          <caret line="133" selection-start-line="133" selection-end-line="133" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Nets/model_CD274.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3144">
+          <caret line="134" selection-start-line="134" selection-end-line="134" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Nets/model_CD278.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="708">
+          <caret line="131" column="4" selection-start-line="131" selection-start-column="4" selection-end-line="131" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/markerLabelPrediction.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="325" column="64" selection-start-line="325" selection-start-column="64" selection-end-line="325" selection-end-column="64" />
+        <state relative-caret-position="690">
+          <caret line="335" lean-forward="true" selection-end-line="335" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/immuneAgeSubsets.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="396">
+          <caret line="918" column="20" selection-start-line="918" selection-start-column="20" selection-end-line="918" selection-end-column="20" />
           <folding>
-            <element signature="e#173#192#0" expanded="true" />
+            <element signature="e#172#191#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/confidenceCalculation.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="660">
+          <caret line="37" column="18" lean-forward="true" selection-start-line="37" selection-start-column="18" selection-end-line="37" selection-end-column="18" />
+          <folding>
+            <element signature="e#86#105#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/00_Main.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1967">
-          <caret line="109" column="71" selection-start-line="109" selection-start-column="71" selection-end-line="109" selection-end-column="71" />
+        <state relative-caret-position="756">
+          <caret line="200" column="61" selection-start-line="200" selection-start-column="61" selection-end-line="200" selection-end-column="61" />
           <folding>
             <element signature="e#86#103#0" expanded="true" />
           </folding>

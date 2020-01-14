@@ -131,7 +131,9 @@ def markerRatioCalculation(sample_df):
     model_CD38.build(input_shape)
     model_CD274 = tf.keras.models.load_model('C:/Users/pc/OneDrive/git_repo/Auto_gate_20_marker/Models/CD274_classfy.h5')
     model_CD274.build(input_shape)
-
+    model_CD278 = tf.keras.models.load_model('C:/Users/pc/OneDrive/git_repo/Auto_gate_20_marker/Models/CD278_classfy.h5')
+    model_CD278.build(input_shape)
+    
     label_df = pd.DataFrame()
 
     start = time.time()
@@ -311,7 +313,11 @@ def markerRatioCalculation(sample_df):
     ratio_CD274_all, CD274_df, CD274_labels = ratioCalculation2(new_df, model_CD274)
     label_df = label_df.append(pd.DataFrame(CD274_labels).T)
     print('Marker %s has finished!' % 'CD274')
-
+    # CD278
+    new_df = copy.deepcopy(sample_df)
+    ratio_CD278_all, CD278_df, CD278_labels = ratioCalculation2(new_df, model_CD278)
+    label_df = label_df.append(pd.DataFrame(CD278_labels).T)
+    print('Marker %s has finished!' % 'CD278')
 
     print('Label prediction has finished!', '\n', '\n')
     # print('Now start to write out the data. This process is time consuming. Please be patient.^_^')
@@ -320,10 +326,10 @@ def markerRatioCalculation(sample_df):
     label_df = label_df.T
     label_df.columns = ['CD3', 'CD4', 'CD57', 'CD56', 'gdTCR', 'CD8',
                         'CD14', 'Igd', 'CD123', 'CD85j', 'CD19', 'CD25',
-                        'CD39', 'CD27', 'CD24', 'CD54RA', 'CD86', 'CD28',
-                        'CD197', 'CD11c', 'CD33', 'CDC152', 'CD161', 'CXCR5',
+                        'CD39', 'CD27', 'CD24', 'CD45RA', 'CD86', 'CD28',
+                        'CD197', 'CD11c', 'CD33', 'CD152', 'CD161', 'CXCR5',
                         'CD183', 'CD94', 'CD127', 'PD1', 'CD20', 'CD16',
-                        'HLA_DR', 'CD11b', 'CCR6', 'CD38', 'CD274']
+                        'HLA_DR', 'CD11b', 'CCR6', 'CD38', 'CD274', 'CD278']
     print('Time cost is %s.' % (time.time() - start))
     print('-' * 100)
     return label_df
