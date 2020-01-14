@@ -14,6 +14,8 @@ from markerLabelPrediction import markerRatioCalculation
 from immuneAgeSubsets import subsetsRatioCalculation_real
 from confidenceCalculation import confidence_calculation
 from immuneAgeCalculation import predict_age
+from immuneImpairment import immuneImpairmentMatrix
+
 
 
 
@@ -214,6 +216,11 @@ if __name__ == '__main__':
         ratio34_all = ratio34_all.append(ratio34_df)
         print('Immune age calculation has finished!', '\n', '-'*100, '\n')
 
+        # 5. Extracting immune damage matrix
+        impair_df = immuneImpairmentMatrix(real_df, sample_id)
+        impair_all = impair_all.append(impair_df)
+        print('Immune impairment matrix has finished!', '\n', '-'*100, '\n')
+
     print('Total time is %s.' % (time.time()-start))
 
     label_frequency_all.to_excel(output_path+'label_frequency_all.xlsx')
@@ -221,6 +228,7 @@ if __name__ == '__main__':
     confidence_all.to_excel(output_path+'confidence_all.xlsx')
     immune_age_all.to_excel(output_path+'immune_age_all.xlsx')
     ratio34_all.to_excel(output_path+'ratio34_all.xlsx', index=False)
+    impair_all.to_excel(output_path+'impairment_all.xlsx', index=False)
 
 
     # Extract the confidence interval 66 subgroup ratios
@@ -228,3 +236,32 @@ if __name__ == '__main__':
     select_subsets = list(select_subsets_df['subset'].values)
     confidence_66_ratio = real_adjust_all.loc[:, select_subsets].T
     confidence_66_ratio.to_excel(output_path+'confidence_66_ratio.xlsx')
+
+
+    ###################################################
+    ####  3. Immune impairment preconditioning     ####
+    ###################################################
+    os.makedirs(output_path+'immune_impairment/')
+    os.makedirs(output_path+'immune_impairment/per_sample_data/')
+    os.makedirs(output_path+'immune_impairment/stage2_data/')
+    os.makedirs(output_path+'immune_impairment/final_score/')
+
+    raw_df = pd.read_csv('C:/Users/pc/OneDrive/PLTTECH/Project/00_immune_age_project/Rawdata/diffusion_original.csv')
+    cell_subsets = ['B.cells', 'CD161negCD45RApos.Tregs', 'CD161pos.NK.cells', 'CD28negCD8pos.T.cells',
+                    'CD57posCD8pos.T.cells', 'CD57pos.NK.cells', 'effector.CD8pos.T.cells',
+                    'effector.memory.CD4pos.T.cells', 'effector.memory.CD8pos.T.cells',
+                    'HLADRnegCD38posCD4pos.T.cells', 'naive.CD4pos.T.cells', 'naive.CD8pos.T.cells',
+                    'PD1posCD8pos.T.cells', 'T.cells', 'CXCR5+CD4pos.T.cells', 'CXCR5+CD8pos.T.cells',
+                    'Th17 CXCR5-CD4pos.T.cells', 'Tregs']
+    cell_subsets.extend(['subject id', 'year', 'visit number', 'age'])
+    raw_df = raw_df.loc[:, cell_subsets]
+
+    for i in range(impair_all.shape[0]):
+        sample_id = impair_all.iloc[i, :]['subject id']
+        sample_df = raw_df.append(impair_all.iloc[i, :])
+        sample_df = sample_df.fillna(0)
+        scaling(sample_df)
+        year_list = [2012, 2013, 2014, 2015, 2019]
+        sample_df = sample_df[sample_df['year'].isin(year_list)]
+        sample_df.to_csv(output_path+'immune_impairment/per_sample_data/%s.csv' % sample_id,
+                         index=False)
