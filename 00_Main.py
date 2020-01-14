@@ -9,8 +9,9 @@ from tkinter import filedialog
 import pandas as pd
 import numpy as np
 import tensorflow as tf
-import os, re, warnings, copy
+import os, re, warnings, copy, time
 from markerLabelPrediction import markerRatioCalculation
+from immuneAgeSubsets import subsetsRatioCalculation_real
 
 
 def ratioCalculation2(df, model):
@@ -41,6 +42,8 @@ if __name__ == '__main__':
     # Choose File Path
     Fpath = filedialog.askdirectory()
 
+    start = time.time()
+
     # Read Panel Information
     panel_file = Fpath + "/panel.xlsx"
     panel_tuple = Fcs.export_panel_tuple(panel_file)
@@ -67,12 +70,13 @@ if __name__ == '__main__':
         save_channel.extend(fcs.preprocess_channels_index)
         # stain_channel_index.extend(add_index)
         pars = [pars[i] for i in range(0, len(pars)) if i + 1 in save_channel]
-        pars = fcs.delete_channel(pars, 89, 169, 173)                  # IMM panel
-        # pars = fcs.delete_channel(pars, 139, 162, 168, 169, 173)     # old pannel
+        # pars = fcs.delete_channel(pars, 89, 169, 173)                  # IMM panel
+        pars = fcs.delete_channel(pars, 139, 162, 168, 169, 173)     # old pannel
         # pars = fcs.marker_rename(pars, ("Event_length", "Event_length"))
         # 根据当前的filename去查找新的name
         new_filename = re.sub("-", "", filename)
-        # new_filename = re.sub("^.+?_", "gsH_", new_filename)
+        new_filename = re.sub("^.+?_", "", new_filename)
+        new_filename = re.sub("^.+?_", "", new_filename)          # 浙一数据打开
         new_file = Fpath + "WriteFcs/" + new_filename
         fcs.write_to(new_file, pars, to='csv')
 
@@ -89,15 +93,27 @@ if __name__ == '__main__':
     new_samples_path = Fpath + 'WriteFcs/'
 
     label_frequency_all = pd.DataFrame()
+    ratio_all = pd.DataFrame()
+    real_all = pd.DataFrame()
+    real_adjust_all = pd.DataFrame()
+    confidence_all = pd.DataFrame()
+    immune_age_all = pd.DataFrame()
+    ratio34_all = pd.DataFrame()
+    impair_all = pd.DataFrame()
+    lung_cancer_all = pd.DataFrame()
+    liver_cancer_all = pd.DataFrame()
+    colorectal_cancer_all = pd.DataFrame()
 
     for info in os.listdir(new_samples_path):
         sample_id = info[:11]
         sample_path = output_path+sample_id
         os.makedirs(sample_path)
+
         # 导入单个样本数据
         sample_df = pd.read_csv(new_samples_path+info)
         sample_df = sample_df.loc[:, markers]
-        # 预测所有marker的标签矩阵
+
+        # 1. Calculate the label matrix for each marker
         pre_labels = markerRatioCalculation(sample_df)
         pre_labels.to_csv(sample_path+'/pre_labels.csv', index=False)
         label_frequency = np.sum(pre_labels)/pre_labels.shape[0]
@@ -106,5 +122,20 @@ if __name__ == '__main__':
         label_frequency_df.to_csv(sample_path+'/label_frequency.csv')
         label_frequency_all = label_frequency_all.append(label_frequency_df)
         print('Marker ratio calculation has finished!', '\n', '-'*100, '\n')
+
+        # 2. Calculate the ratio of a specific subgroup
+        real_merge_df = subsetsRatioCalculation_real(pre_labels)
+        real_df = real_merge_df.T
+        real_df['subset'] = list(real_df.index)
+        real_df.columns = ['frequency', 'subset']
+        real_df.index = [i for i in range(real_df.shape[0])]
+        real_df = real_df[['subset', 'frequency']]
+        real_df['frequency'] = real_df['frequency'].apply(lambda x: x*100)
+        real_df.to_excel(sample_path+'/real_df.xlsx', index=False)
+        real_merge_df.index = [sample_id]
+        real_all = real_all.append(real_merge_df)
+        print('Subset ratio calculation has finished!', '\n', '-'*100, '\n')
+
+    print('Total time is %s.' % (time.time()-start))
 
     label_frequency_all.to_excel(output_path+'label_frequency_all.xlsx')
