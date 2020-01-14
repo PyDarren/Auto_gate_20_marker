@@ -2,12 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="84a6c1c6-77d9-48ba-aa4b-421e21d473a7" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/confidenceCalculation.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/00_Main.py" beforeDir="false" afterPath="$PROJECT_DIR$/00_Main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/immuneAgeSubsets.py" beforeDir="false" afterPath="$PROJECT_DIR$/immuneAgeSubsets.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/markerLabelPrediction.py" beforeDir="false" afterPath="$PROJECT_DIR$/markerLabelPrediction.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/immuneAgeCalculation.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -17,13 +12,25 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/00_Main.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="756">
-              <caret line="200" column="61" selection-start-line="200" selection-start-column="61" selection-end-line="200" selection-end-column="61" />
+            <state relative-caret-position="612">
+              <caret line="194" column="58" selection-start-line="194" selection-start-column="58" selection-end-line="194" selection-end-column="58" />
               <folding>
                 <element signature="e#86#103#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/immuneAgeCalculation.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="744">
+              <caret line="64" selection-start-line="64" selection-end-line="64" />
+              <folding>
+                <element signature="e#173#192#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -164,6 +171,7 @@
         <option value="$PROJECT_DIR$/immuneAgeSubsets.py" />
         <option value="$PROJECT_DIR$/confidenceCalculation.py" />
         <option value="$PROJECT_DIR$/00_Main.py" />
+        <option value="$PROJECT_DIR$/immuneAgeCalculation.py" />
       </list>
     </option>
   </component>
@@ -350,21 +358,21 @@
       <workItem from="1578461925921" duration="68000" />
       <workItem from="1578462026494" duration="47381000" />
       <workItem from="1578879567792" duration="6665000" />
-      <workItem from="1578980443087" duration="6707000" />
+      <workItem from="1578980443087" duration="6929000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="113387000" />
+    <option name="totallyTimeSpent" value="113609000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="66" y="-8" width="1862" height="1096" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" weight="0.18784839" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.18784839" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
-      <window_info active="true" id="Python Console" order="3" visible="true" weight="0.4214047" />
+      <window_info id="Python Console" order="3" weight="0.4214047" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Debug" order="2" weight="0.4" />
@@ -734,10 +742,20 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/00_Main.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="756">
-          <caret line="200" column="61" selection-start-line="200" selection-start-column="61" selection-end-line="200" selection-end-column="61" />
+        <state relative-caret-position="612">
+          <caret line="194" column="58" selection-start-line="194" selection-start-column="58" selection-end-line="194" selection-end-column="58" />
           <folding>
             <element signature="e#86#103#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/immuneAgeCalculation.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="744">
+          <caret line="64" selection-start-line="64" selection-end-line="64" />
+          <folding>
+            <element signature="e#173#192#0" expanded="true" />
           </folding>
         </state>
       </provider>

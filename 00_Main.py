@@ -13,6 +13,8 @@ import os, re, warnings, copy, time
 from markerLabelPrediction import markerRatioCalculation
 from immuneAgeSubsets import subsetsRatioCalculation_real
 from confidenceCalculation import confidence_calculation
+from immuneAgeCalculation import predict_age
+
 
 
 warnings.filterwarnings('ignore')
@@ -194,11 +196,31 @@ if __name__ == '__main__':
         adjust_df.index = [sample_id]
         real_adjust_all = real_adjust_all.append(adjust_df)
 
+        # 4. Calculate immune age
+        viable_df = pd.DataFrame(['Singlets/Viable', 99]).T
+        viable_df.columns = ['subset', 'frequency']
+        real_df = real_df.append(viable_df)
+        age_df, ratio34_df = predict_age(real_df)
+        frequency_list = [info, 'x']
+        frequency_list.extend(list(ratio34_df['frequency'].values))
+        col_names = ['Patient.ID', 'age', 'B cells', 'CD161+CD4+ T cells', 'CD161+CD8+ T cells', 'CD161-CD45RA+ Tregs', 'CD161-CD45RA- Tregs', 'CD20- CD3- lymphocytes', 'CD28+CD8+ T cells', 'CD4+ T cells', 'CD4+CD28+ T cells', 'CD8+ T cells', 'CD85j+CD8+ T cells', 'IgD+CD27+ B cells', 'IgD+CD27- B cells', 'IgD-CD27+ B cells', 'IgD-CD27- B cells', 'NK cells', 'NKT cells', 'T cells', 'Tregs', 'central memory CD4+ T cells', 'central memory CD8+ T cells', 'effector CD4+ T cells', 'effector CD8+ T cells', 'effector memory CD4+ T cells', 'effector memory CD8+ T cells', 'gamma-delta T cells', 'lymphocytes', 'memory B cells', 'monocytes', 'naive B cells', 'naive CD4+ T cells', 'naive CD8+ T cells', 'transitional B cells', 'viable/singlets']
+        ratio34_df = pd.DataFrame(frequency_list).T
+        ratio34_df.columns = col_names
+        age_df.index = [sample_id]
+        age_df.columns = ['immune age']
+        age_df.to_excel(sample_path+'/immune_age.xlsx', index=False)
+        ratio34_df.to_excel(sample_path+'/subset34_ratio.xlsx', index=False)
+        immune_age_all = immune_age_all.append(age_df)
+        ratio34_all = ratio34_all.append(ratio34_df)
+        print('Immune age calculation has finished!', '\n', '-'*100, '\n')
+
     print('Total time is %s.' % (time.time()-start))
 
     label_frequency_all.to_excel(output_path+'label_frequency_all.xlsx')
     real_all.to_excel(output_path+'real_all.xlsx')
     confidence_all.to_excel(output_path+'confidence_all.xlsx')
+    immune_age_all.to_excel(output_path+'immune_age_all.xlsx')
+    ratio34_all.to_excel(output_path+'ratio34_all.xlsx', index=False)
 
 
     # Extract the confidence interval 66 subgroup ratios
