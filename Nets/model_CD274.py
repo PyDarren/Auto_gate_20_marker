@@ -104,7 +104,7 @@ if __name__ == "__main__":
 
     model = tf.keras.Sequential([
         tf.keras.layers.Dense(64, activation='tanh'),
-        # tf.keras.layers.Dense(64, activation='tanh'),
+        tf.keras.layers.Dense(64, activation='tanh'),
         # tf.keras.layers.Dense(64, activation='tanh'),
         # tf.keras.layers.Dense(32, activation='tanh'),
         tf.keras.layers.Dense(2, activation='sigmoid')
@@ -119,7 +119,7 @@ if __name__ == "__main__":
 
     model.fit(train_X,
               train_labels,
-              epochs=100,
+              epochs=1000,
               # batch_size=16384,
               # validation_data=(test_X, test_labels),
               # verbose=2
