@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="84a6c1c6-77d9-48ba-aa4b-421e21d473a7" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/immuneAgeCalculation.py" beforeDir="false" afterPath="$PROJECT_DIR$/immuneAgeCalculation.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/file_merge.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -13,13 +13,22 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/00_Main.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-598">
-              <caret line="214" column="53" selection-start-line="214" selection-start-column="53" selection-end-line="214" selection-end-column="53" />
+            <state relative-caret-position="168">
+              <caret line="7" selection-start-line="7" selection-end-line="8" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/file_merge.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="325">
+              <caret line="22" lean-forward="true" selection-start-line="22" selection-end-line="22" />
               <folding>
-                <element signature="e#86#103#0" expanded="true" />
+                <element signature="e#85#104#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -193,6 +202,7 @@
         <option value="$PROJECT_DIR$/00_Main.py" />
         <option value="$PROJECT_DIR$/newImmuneAgeModel.py" />
         <option value="$PROJECT_DIR$/immuneAgeCalculation.py" />
+        <option value="$PROJECT_DIR$/file_merge.py" />
       </list>
     </option>
   </component>
@@ -228,6 +238,13 @@
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="settings.editor.selected.configurable" value="MTConfigurable" />
   </component>
+  <component name="PyConsoleOptionsProvider">
+    <option name="myPythonConsoleState">
+      <console-settings>
+        <option name="useSoftWraps" value="true" />
+      </console-settings>
+    </option>
+  </component>
   <component name="RunDashboard">
     <option name="ruleStates">
       <list>
@@ -240,7 +257,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.00_Main">
+  <component name="RunManager" selected="Python.file_merge">
     <configuration name="00_Main" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="Auto_gate_20_marker" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -285,7 +302,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="close_channel" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="file_merge" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="Auto_gate_20_marker" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -298,7 +315,7 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/close_channel.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/file_merge.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -353,11 +370,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.file_merge" />
         <item itemvalue="Python.00_Main" />
         <item itemvalue="Python.markerLabelPrediction" />
         <item itemvalue="Python.IMMsight_choose_panel" />
         <item itemvalue="Python.model_CD28" />
-        <item itemvalue="Python.close_channel" />
       </list>
     </recent_temporary>
   </component>
@@ -380,20 +397,21 @@
       <workItem from="1578462026494" duration="47381000" />
       <workItem from="1578879567792" duration="6665000" />
       <workItem from="1578980443087" duration="8595000" />
-      <workItem from="1579055693745" duration="7745000" />
+      <workItem from="1579055693745" duration="9271000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="123020000" />
+    <option name="totallyTimeSpent" value="124546000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.19004282" />
+      <window_info content_ui="combo" id="Project" order="0" weight="0.19004282" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
-      <window_info id="Python Console" order="3" weight="0.4716274" />
+      <window_info id="Python Console" order="3" visible="true" weight="0.4716274" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Debug" order="2" weight="0.4" />
@@ -405,7 +423,7 @@
       <window_info anchor="bottom" id="Database Changes" order="8" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" weight="0.32924107" />
       <window_info anchor="bottom" id="Terminal" order="10" />
-      <window_info anchor="bottom" id="Run" order="11" weight="0.3897937" />
+      <window_info active="true" anchor="bottom" id="Run" order="11" visible="true" weight="0.3893303" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -425,15 +443,9 @@
     <SUITE FILE_PATH="coverage/Auto_gate_20_marker$marker_merge.coverage" NAME="marker_merge Coverage Results" MODIFIED="1578291300614" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Auto_gate_20_marker$model_CD28.coverage" NAME="model_CD28 Coverage Results" MODIFIED="1578466737484" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Nets" />
     <SUITE FILE_PATH="coverage/Auto_gate_20_marker$markerLabelPrediction.coverage" NAME="markerLabelPrediction Coverage Results" MODIFIED="1578908357554" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Auto_gate_20_marker$file_merge.coverage" NAME="file_merge Coverage Results" MODIFIED="1579071135747" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python37/Lib/site-packages/pandas/core/frame.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="299">
-          <caret line="3801" column="8" selection-start-line="3801" selection-start-column="8" selection-end-line="3801" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/FCS.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="5642">
@@ -794,10 +806,17 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/00_Main.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-598">
-          <caret line="214" column="53" selection-start-line="214" selection-start-column="53" selection-end-line="214" selection-end-column="53" />
+        <state relative-caret-position="168">
+          <caret line="7" selection-start-line="7" selection-end-line="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/file_merge.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="325">
+          <caret line="22" lean-forward="true" selection-start-line="22" selection-end-line="22" />
           <folding>
-            <element signature="e#86#103#0" expanded="true" />
+            <element signature="e#85#104#0" expanded="true" />
           </folding>
         </state>
       </provider>
