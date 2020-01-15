@@ -51,14 +51,26 @@ def predict_age(df):
     df = df.loc[subsets_34]
     df.index = [i for i in range(df.shape[0])]
 
-    lv1 = np.sum(np.dot(df['frequency'].values, formula_lvs['LV1'].values))
-    lv2 = np.sum(np.dot(df['frequency'].values, formula_lvs['LV2'].values))
-    lv3 = np.sum(np.dot(df['frequency'].values, formula_lvs['LV3'].values))
+    # lv1 = np.sum(np.dot(df['frequency'].values, formula_lvs['LV1'].values))
+    # lv2 = np.sum(np.dot(df['frequency'].values, formula_lvs['LV2'].values))
+    # lv3 = np.sum(np.dot(df['frequency'].values, formula_lvs['LV3'].values))
+    #
+    # immune_age = 40.1322 - 0.6259*lv1 + 0.2941*lv2 - 0.0356*lv3
 
-    immune_age = 40.1322 - 0.6259*lv1 + 0.2941*lv2 - 0.0356*lv3
+    coefs = [0.47146983, -0.3650005 , -0.24882258, -0.9051412 , -0.31502607,
+            0.51286523,  0.2611913 ,  0.55553634, -0.13397269,  0.12581725,
+            0.23091759, -0.05879372,  0.20945062, -0.02723427, -0.12342243,
+            0.16356419, -0.07602652, -0.05547163, -0.23663755,  0.14209078,
+            -0.53045574,  0.0091442 ,  0.37538138,  0.02249695,  0.21533253,
+            0.30150205, -0.24412036,  0.87213848,  0.24412037,  6.68411177,
+            -0.17373217, -0.06025842,  0.58863103,  0.]
+    immune_age = -103.423110567636 + np.sum(np.dot(df['frequency'].values, coefs))
+
     immune_age = np.abs(immune_age)
     if immune_age <= 15:
         immune_age += 15
+    if immune_age >= 100:
+        immune_age = 100
     print(immune_age)
     age_df = pd.DataFrame([immune_age])
     ratio34_df = df
